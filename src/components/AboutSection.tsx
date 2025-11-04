@@ -84,7 +84,7 @@ export function AboutSection() {
           className="relative group"
         >
           <motion.div 
-            className="relative aspect-[3/4] overflow-hidden"
+            className="relative overflow-hidden"
             whileHover={{ scale: 0.98 }}
             transition={{ duration: 0.5 }}
           >
@@ -92,17 +92,21 @@ export function AboutSection() {
               initial={{ scale: 1.2, opacity: 0 }}
               animate={isInView ? { scale: 1, opacity: 1 } : {}}
               transition={{ duration: 1.2, delay: 0.4 }}
+              className="relative w-full"
             >
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1639156137702-2e6e1d7f40d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc2MjE4MzEyNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Modern architecture of ALD Residence"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              <div className="relative">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1639156137702-2e6e1d7f40d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc2MjE4MzEyNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Modern architecture of ALD Residence"
+                  className="w-full h-auto block object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={{ display: 'block' }}
+                />
+                <div className="absolute inset-0 ring-1 ring-inset ring-black/10 pointer-events-none" />
+                
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--ald-charcoal)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              </div>
             </motion.div>
-            <div className="absolute inset-0 ring-1 ring-inset ring-black/10" />
-            
-            {/* Hover overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--ald-charcoal)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </motion.div>
           
           {/* Decorative elements */}

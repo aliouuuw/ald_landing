@@ -69,7 +69,7 @@ export function ContactSection() {
                 className="text-3xl text-[var(--ald-charcoal)] mb-8"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                Elite Group
+                Elite Group Sénégal S.A.
               </h3>
 
               <div className="space-y-6">
@@ -79,9 +79,14 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="text-sm text-[var(--ald-charcoal)]/60 mb-1">Téléphone</div>
-                    <a href="tel:+221123456789" className="text-lg text-[var(--ald-charcoal)] hover:text-[var(--ald-gold)] transition-colors">
-                      +221 12 345 67 89
-                    </a>
+                    <div className="space-y-1">
+                      <a href="tel:+221778838383" className="block text-lg text-[var(--ald-charcoal)] hover:text-[var(--ald-gold)] transition-colors">
+                        +221 77 883 83 83
+                      </a>
+                      <a href="tel:+221338690869" className="block text-lg text-[var(--ald-charcoal)] hover:text-[var(--ald-gold)] transition-colors">
+                        +221 33 869 08 69
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -91,8 +96,8 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="text-sm text-[var(--ald-charcoal)]/60 mb-1">Email</div>
-                    <a href="mailto:contact@aldresidence.com" className="text-lg text-[var(--ald-charcoal)] hover:text-[var(--ald-gold)] transition-colors">
-                      contact@aldresidence.com
+                    <a href="mailto:commercial@elitegroup-senegal.com" className="text-lg text-[var(--ald-charcoal)] hover:text-[var(--ald-gold)] transition-colors">
+                      commercial@elitegroup-senegal.com
                     </a>
                   </div>
                 </div>
@@ -113,12 +118,20 @@ export function ContactSection() {
             </div>
 
             <div className="pt-8 border-t border-[var(--ald-charcoal)]/10">
-              <p className="text-sm text-[var(--ald-charcoal)]/60 leading-relaxed">
+              <p className="text-sm text-[var(--ald-charcoal)]/60 leading-relaxed mb-4">
                 Horaires d'ouverture :<br />
                 Lundi - Vendredi : 9h00 - 18h00<br />
                 Samedi : 10h00 - 16h00<br />
                 Dimanche : Sur rendez-vous
               </p>
+              <a 
+                href="https://www.elitegroup.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-[var(--ald-gold)] hover:underline"
+              >
+                www.elitegroup.com
+              </a>
             </div>
           </motion.div>
 
@@ -216,6 +229,9 @@ export function ContactSection() {
               </h3>
               <p className="text-sm text-[var(--ald-charcoal)]/60">
                 Designed by Sovereign Studio
+              </p>
+              <p className="text-xs text-[var(--ald-charcoal)]/50 mt-2">
+                Elite Group Sénégal S.A.
               </p>
             </div>
 

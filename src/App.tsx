@@ -4,6 +4,7 @@ import { LoadingScreen } from './components/LoadingScreen';
 import { Navigation } from './components/Navigation';
 import { GrainOverlay } from './components/GrainOverlay';
 import { BackToTop } from './components/BackToTop';
+import { WhatsAppButton } from './components/WhatsAppButton';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { StatsSection } from './components/StatsSection';
@@ -21,6 +22,7 @@ export default function App() {
       <GrainOverlay />
       <Navigation />
       <BackToTop />
+      <WhatsAppButton />
       <main className="overflow-x-hidden">
         <HeroSection />
         <AboutSection />

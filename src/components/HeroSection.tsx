@@ -48,7 +48,7 @@ export function HeroSection() {
             className="mb-6 text-sm text-[var(--ald-gold)]"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            LES ALMADIES · DAKAR
+            LES ALMADIES · DAKAR · 20 ÉTAGES
           </motion.div>
           
           <motion.h1

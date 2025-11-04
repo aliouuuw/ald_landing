@@ -4,10 +4,10 @@ import { motion, useInView } from 'motion/react';
 import { useRef, useState, useEffect } from 'react';
 
 const stats = [
-  { value: 250, suffix: 'm²', label: 'Surface maximale' },
-  { value: 24, suffix: '', label: 'Résidences exclusives' },
-  { value: 5, suffix: 'min', label: 'De l\'océan Atlantique' },
-  { value: 100, suffix: '%', label: 'Matériaux premium' },
+  { value: 20, suffix: '', label: 'Étages' },
+  { value: 1194, suffix: 'm²', label: 'Surface maximale' },
+  { value: 5, suffix: '', label: 'Piscines panoramiques' },
+  { value: 16, suffix: '', label: 'Ascenseurs' },
 ];
 
 function CountUp({ end, duration = 2, suffix = '' }: { end: number; duration?: number; suffix?: string }) {

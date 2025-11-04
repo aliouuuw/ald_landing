@@ -4,32 +4,51 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Waves, Dumbbell, Sparkles, Film, Baby } from 'lucide-react';
+import { Waves, Dumbbell, Sparkles, Film, Baby, Wind, Heart, Palette } from 'lucide-react';
 
 const amenities = [
   {
-    title: 'Piscine Panoramique',
-    description: 'Vue imprenable sur l\'Atlantique',
+    title: '5 Piscines Panoramiques',
+    description: 'Dont une au 19e étage avec vue sur l\'Atlantique et Dakar',
     image: 'https://images.unsplash.com/flagged/photo-1569880286597-0019858e19d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmZpbml0eSUyMHBvb2wlMjBvY2VhbiUyMHZpZXd8ZW58MXx8fHwxNzYyMTgzMDc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     icon: Waves,
+    highlight: true,
   },
   {
-    title: 'Salle de Sport & Yoga',
-    description: 'Équipements haut de gamme',
+    title: 'Salle de Sport',
+    description: 'Entièrement équipée : musculation & cardio',
     image: 'https://images.unsplash.com/photo-1761971975962-9cc397e2ba2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBneW0lMjB5b2dhJTIwc3R1ZGlvfGVufDF8fHx8MTc2MjE4MzEyOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     icon: Dumbbell,
   },
   {
-    title: 'Sauna & Spa',
-    description: 'Espace bien-être privatif',
+    title: 'Salles de Yoga & Pilates',
+    description: 'Espaces dédiés au bien-être et à la méditation',
+    image: 'https://images.unsplash.com/photo-1761971975962-9cc397e2ba2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBneW0lMjB5b2dhJTIwc3R1ZGlvfGVufDF8fHx8MTc2MjE4MzEyOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    icon: Wind,
+  },
+  {
+    title: 'Sauna & Hammam',
+    description: 'Bain turc et espaces de détente',
     image: 'https://images.unsplash.com/photo-1757940661240-f2e8d2ff93bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGElMjBzYXVuYSUyMGx1eHVyeXxlbnwxfHx8fDE3NjIxODMxMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     icon: Sparkles,
   },
   {
-    title: 'Salle de Cinéma',
-    description: 'Expérience audiovisuelle premium',
+    title: 'Salles de Massage & Relaxation',
+    description: 'Espaces de bien-être et de sérénité',
+    image: 'https://images.unsplash.com/photo-1757940661240-f2e8d2ff93bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGElMjBzYXVuYSUyMGx1eHVyeXxlbnwxfHx8fDE3NjIxODMxMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    icon: Heart,
+  },
+  {
+    title: 'Salle de Cinéma & Salle d\'Art',
+    description: 'Expérience culturelle et audiovisuelle premium',
     image: 'https://images.unsplash.com/photo-1517486518908-97a5f91b325f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob21lJTIwY2luZW1hJTIwdGhlYXRlcnxlbnwxfHx8fDE3NjIxODMxMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     icon: Film,
+  },
+  {
+    title: 'Crèche',
+    description: 'Espace spacieux et sécurisé pour les enfants',
+    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHBsYXlyb29tfGVufDF8fHx8MTc2MjE5MzU4MXww&ixlib=rb-4.1.0&q=80&w=1080',
+    icon: Baby,
   },
 ];
 
@@ -53,18 +72,18 @@ export function AmenitiesSection() {
             className="text-5xl text-[var(--ald-charcoal)] mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Services d'Exception
+            Une vie au sommet du confort
           </h2>
           <p 
             className="text-xl text-[var(--ald-ocean)] max-w-2xl mx-auto italic"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Chaque instant devient privilège
+            Chaque espace est pensé pour le bien-être, la détente et la convivialité
           </p>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {amenities.map((amenity, index) => {
             const Icon = amenity.icon;
             return (
@@ -74,7 +93,9 @@ export function AmenitiesSection() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="group relative overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow duration-500"
+                className={`group relative overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${
+                  amenity.highlight ? 'md:col-span-2 lg:col-span-3 ring-2 ring-[var(--ald-gold)]/30' : ''
+                }`}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <motion.div
@@ -117,32 +138,6 @@ export function AmenitiesSection() {
               </motion.div>
             );
           })}
-
-          {/* Crèche - Special Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="md:col-span-2 bg-[var(--ald-ocean)] text-white p-12 flex items-center justify-between"
-          >
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <Baby className="w-8 h-8 text-[var(--ald-gold)]" />
-                <h3
-                  className="text-4xl"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  Crèche
-                </h3>
-              </div>
-              <p className="text-xl text-white/90 max-w-2xl">
-                Un espace sécurisé et ludique pour les plus jeunes résidents
-              </p>
-            </div>
-            <div className="hidden lg:block text-[var(--ald-gold)] opacity-10">
-              <Baby className="w-32 h-32" />
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

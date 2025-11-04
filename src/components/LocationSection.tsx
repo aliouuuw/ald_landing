@@ -4,28 +4,46 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { MapPin, Palmtree, Building2, Anchor } from 'lucide-react';
+import { MapPin, Palmtree, Building2, Anchor, ShieldCheck, Car, Zap } from 'lucide-react';
 
 const highlights = [
   {
-    icon: Anchor,
-    title: 'Front de Mer',
-    description: '5 minutes de l\'Atlantique',
-  },
-  {
     icon: Building2,
-    title: 'Quartier Diplomatique',
-    description: 'Environnement prestigieux',
+    title: 'Triangle des Almadies',
+    description: 'Proximité immédiate des ambassades des États-Unis et du Canada',
   },
   {
-    icon: Palmtree,
-    title: 'Nature & Calme',
-    description: 'Verdure omniprésente',
+    icon: Anchor,
+    title: 'Point le plus à l\'ouest d\'Afrique',
+    description: 'Quartier calme, cosmopolite et sécurisé',
   },
   {
     icon: MapPin,
-    title: 'Accès Premium',
-    description: 'Restaurants & boutiques',
+    title: 'Proximité des Commerces',
+    description: 'Restaurants, plages et commerces les plus prisés de Dakar',
+  },
+  {
+    icon: Palmtree,
+    title: 'Cadre de Vie Unique',
+    description: 'Entre océan et modernité',
+  },
+];
+
+const securityFeatures = [
+  {
+    icon: ShieldCheck,
+    title: 'Parking Sécurisé 24h/24',
+    description: 'Caméras et agents de sécurité',
+  },
+  {
+    icon: Car,
+    title: '2 à 4 Places de Stationnement',
+    description: 'Par appartement (jusqu\'à 4 pour penthouses)',
+  },
+  {
+    icon: Zap,
+    title: '10 Bornes de Recharge',
+    description: 'Pour véhicules électriques et hybrides',
   },
 ];
 
@@ -55,7 +73,7 @@ export function LocationSection() {
             className="text-2xl text-[var(--ald-ocean)] max-w-3xl mx-auto italic"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Située à la pointe des Almadies, entre calme, prestige et horizon
+            Le point le plus à l'ouest du continent africain
           </p>
         </motion.div>
 
@@ -122,30 +140,48 @@ export function LocationSection() {
           </motion.div>
         </div>
 
-        {/* Map placeholder */}
+        {/* Security & Parking Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative aspect-[21/9] bg-[var(--ald-marble)] border border-[var(--ald-gold)]/20 overflow-hidden"
+          className="mt-16"
         >
-          {/* Placeholder for interactive map */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-[var(--ald-gold)] mx-auto mb-4" />
-              <p className="text-[var(--ald-charcoal)]/60">
-                Carte interactive disponible prochainement
-              </p>
-            </div>
+          <div className="text-center mb-12">
+            <h3
+              className="text-4xl text-[var(--ald-charcoal)] mb-4"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Sérénité au quotidien
+            </h3>
+            <p className="text-lg text-[var(--ald-charcoal)]/70">
+              Sécurité et services premium
+            </p>
           </div>
 
-          {/* Decorative grid */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="grid grid-cols-8 grid-rows-4 h-full">
-              {Array.from({ length: 32 }).map((_, i) => (
-                <div key={i} className="border border-[var(--ald-charcoal)]" />
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {securityFeatures.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                  className="bg-white p-8 border border-[var(--ald-gold)]/20 hover:border-[var(--ald-gold)]/50 transition-colors duration-300"
+                >
+                  <div className="w-14 h-14 flex items-center justify-center bg-[var(--ald-gold)]/10 text-[var(--ald-gold)] mb-6">
+                    <Icon className="w-7 h-7" />
+                  </div>
+                  <h4 className="text-xl text-[var(--ald-charcoal)] mb-2 font-medium">
+                    {feature.title}
+                  </h4>
+                  <p className="text-[var(--ald-charcoal)]/70">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </div>
