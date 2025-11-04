@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Waves, Dumbbell, Sparkles, Film, Baby, Wind, Heart, Palette } from 'lucide-react';
+import { Waves, Dumbbell, Sparkles, Film, Baby, Wind, Heart } from 'lucide-react';
 
 const amenities = [
   {

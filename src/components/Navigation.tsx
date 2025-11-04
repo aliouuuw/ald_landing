@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'motion/react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
@@ -16,7 +16,6 @@ const navLinks = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const backgroundColor = useTransform(
     scrollY,
@@ -29,13 +28,6 @@ export function Navigation() {
     [0, 100],
     ['blur(0px)', 'blur(20px)']
   );
-
-  useEffect(() => {
-    const unsubscribe = scrollY.on('change', (latest) => {
-      setIsScrolled(latest > 50);
-    });
-    return () => unsubscribe();
-  }, [scrollY]);
 
   return (
     <>
@@ -71,7 +63,7 @@ export function Navigation() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="hidden lg:flex items-center gap-12"
             >
-              {navLinks.map((link, index) => (
+              {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}

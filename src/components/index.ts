@@ -11,7 +11,6 @@ export { PlansSection } from './PlansSection';
 export { LocationSection } from './LocationSection';
 export { TestimonialsSection } from './TestimonialsSection';
 export { ContactSection } from './ContactSection';
-export { BrochuresSection } from './BrochuresSection';
 
 // Navigation & UI
 export { Navigation } from './Navigation';
@@ -19,12 +18,7 @@ export { BackToTop } from './BackToTop';
 export { LoadingScreen } from './LoadingScreen';
 export { GrainOverlay } from './GrainOverlay';
 
-// Design System Components
-export { LuxuryButton } from './LuxuryButton';
-export { LuxuryCard } from './LuxuryCard';
-
 // Utilities
 export { VideoBackground } from './VideoBackground';
-export { SectionDivider } from './SectionDivider';
 export { ImageWithFallback } from './figma/ImageWithFallback';
 

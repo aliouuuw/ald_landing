@@ -71,7 +71,7 @@ export function AboutSection() {
           >
             <div className="h-px w-24 bg-[var(--ald-gold)] mb-6" />
             <div className="text-xs tracking-[0.3em] text-[var(--ald-charcoal)]/60 uppercase">
-              Conçu par Sovereign Studio
+              Conçu par @aliouuuw
             </div>
           </motion.div>
         </motion.div>

@@ -227,11 +227,8 @@ export function ContactSection() {
               >
                 ALD by Elite
               </h3>
-              <p className="text-sm text-[var(--ald-charcoal)]/60">
-                Designed by Sovereign Studio
-              </p>
-              <p className="text-xs text-[var(--ald-charcoal)]/50 mt-2">
-                Elite Group Sénégal S.A.
+              <p className="text-xs tracking-[0.3em] text-[var(--ald-charcoal)]/60 uppercase">
+                Designed by @aliouuuw
               </p>
             </div>
 

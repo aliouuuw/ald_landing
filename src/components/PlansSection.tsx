@@ -153,7 +153,7 @@ export function PlansSection() {
           <div className="flex-grow">
             <div className="text-xs text-[var(--ald-charcoal)]/60 uppercase tracking-wider mb-4">Caractéristiques</div>
             <ul className="space-y-2">
-              {plan.features.map((feature: string, i: number) => (
+              {plan.features.map((feature: string) => (
                 <li
                   key={feature}
                   className="flex items-center gap-3 text-[var(--ald-charcoal)]/80 text-sm opacity-80 group-hover:opacity-100 transition-opacity duration-300"

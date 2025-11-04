@@ -1,4 +1,5 @@
 import Lenis from 'lenis';
+import { useEffect } from 'react';
 
 /**
  * Initialize Lenis smooth scroll with luxury-focused configuration
@@ -62,7 +63,7 @@ export function useSmoothScroll() {
     (lenisInstance as any) = lenis;
 
     // Integrate with Framer Motion
-    lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }: any) => {
+    lenis.on('scroll', () => {
       // Custom scroll events can be handled here
     });
 
