@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import aboutImage from '../../Photos ALD/Fichier 4.png';
 
 export function AboutSection() {
   const ref = useRef(null);
@@ -96,7 +97,7 @@ export function AboutSection() {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1639156137702-2e6e1d7f40d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc2MjE4MzEyNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src={aboutImage}
                   alt="Modern architecture of ALD Residence"
                   className="w-full h-auto block object-cover transition-transform duration-700 group-hover:scale-105"
                   style={{ display: 'block' }}

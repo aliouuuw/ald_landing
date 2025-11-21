@@ -5,6 +5,7 @@ import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { MapPin, Palmtree, Building2, Anchor, ShieldCheck, Car, Zap } from 'lucide-react';
+import locationImage from '../../Photos ALD/Fichier 2.png';
 
 const highlights = [
   {
@@ -87,7 +88,7 @@ export function LocationSection() {
           >
             <div className="relative aspect-[4/3] overflow-hidden">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1712433323535-1be22838d015?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2FzdGFsJTIwZGFrYXIlMjBhZnJpY2F8ZW58MXx8fHwxNzYyMTgzMTMwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={locationImage}
                 alt="Les Almadies coastline"
                 className="w-full h-full object-cover"
               />

@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { VideoBackground } from './VideoBackground';
+import heroImage from '../../Photos ALD/Fichier 3.png';
 
 export function HeroSection() {
   const { scrollY } = useScroll();
@@ -19,7 +20,7 @@ export function HeroSection() {
         className="absolute inset-0 will-change-transform"
       >
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1673403731036-30ef7a4995f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBvY2VhbiUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjIxODMxMjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src={heroImage}
           alt="ALD Residence overlooking the ocean"
           className="h-full w-full object-cover"
         />

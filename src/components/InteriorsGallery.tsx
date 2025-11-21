@@ -5,26 +5,30 @@ import { useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import interiorSalon from '../../Photos ALD/Fichier 10.png';
+import interiorSuite from '../../Photos ALD/Fichier 12.png';
+import interiorCuisine from '../../Photos ALD/Fichier 8.png';
+import interiorBath from '../../Photos ALD/Fichier 15.png';
 
 const interiors = [
   {
     title: 'Salon',
-    image: 'https://images.unsplash.com/photo-1679862342541-e408d4f3ab80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBsaXZpbmclMjByb29tJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzYyMTU4NTUwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: interiorSalon,
     description: 'Espaces ouverts baignés de lumière naturelle',
   },
   {
     title: 'Cuisine',
-    image: 'https://images.unsplash.com/photo-1643034738686-d69e7bc047e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBraXRjaGVuJTIwbWFyYmxlfGVufDF8fHx8MTc2MjExMDMxMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: interiorCuisine,
     description: 'Finitions en marbre et équipements premium',
   },
   {
     title: 'Suite Principale',
-    image: 'https://images.unsplash.com/photo-1702411200201-3061d0eea802?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBiZWRyb29tJTIwc3VpdGV8ZW58MXx8fHwxNzYyMTgzMTI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: interiorSuite,
     description: 'Sanctuaire de repos et d\'intimité',
   },
   {
     title: 'Salle de Bain',
-    image: 'https://images.unsplash.com/photo-1760564019103-81cd3c225cd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBiYXRocm9vbSUyMHNwYXxlbnwxfHx8fDE3NjIxODMxMjd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: interiorBath,
     description: 'Design spa avec matériaux nobles',
   },
 ];

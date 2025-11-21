@@ -5,49 +5,56 @@ import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Waves, Dumbbell, Sparkles, Film, Baby, Wind, Heart } from 'lucide-react';
+import amenityPools from '../../Photos ALD/Fichier 3.png';
+import amenityGym from '../../Photos ALD/Fichier 23.png';
+import amenityYoga from '../../Photos ALD/Fichier 21.png';
+import amenitySpa from '../../Photos ALD/Fichier 17.png';
+import amenityMassage from '../../Photos ALD/Fichier 10.png';
+import amenityCinema from '../../Photos ALD/Fichier 18.png';
+import amenityCreche from '../../Photos ALD/Fichier 6.png';
 
 const amenities = [
   {
     title: '5 Piscines Panoramiques',
     description: 'Dont une au 19e étage avec vue sur l\'Atlantique et Dakar',
-    image: 'https://images.unsplash.com/flagged/photo-1569880286597-0019858e19d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmZpbml0eSUyMHBvb2wlMjBvY2VhbiUyMHZpZXd8ZW58MXx8fHwxNzYyMTgzMDc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: amenityPools,
     icon: Waves,
     highlight: true,
   },
   {
     title: 'Salle de Sport',
     description: 'Entièrement équipée : musculation & cardio',
-    image: 'https://images.unsplash.com/photo-1761971975962-9cc397e2ba2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBneW0lMjB5b2dhJTIwc3R1ZGlvfGVufDF8fHx8MTc2MjE4MzEyOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: amenityGym,
     icon: Dumbbell,
   },
   {
     title: 'Salles de Yoga & Pilates',
     description: 'Espaces dédiés au bien-être et à la méditation',
-    image: 'https://images.unsplash.com/photo-1761971975962-9cc397e2ba2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBneW0lMjB5b2dhJTIwc3R1ZGlvfGVufDF8fHx8MTc2MjE4MzEyOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: amenityYoga,
     icon: Wind,
   },
   {
     title: 'Sauna & Hammam',
     description: 'Bain turc et espaces de détente',
-    image: 'https://images.unsplash.com/photo-1757940661240-f2e8d2ff93bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGElMjBzYXVuYSUyMGx1eHVyeXxlbnwxfHx8fDE3NjIxODMxMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: amenitySpa,
     icon: Sparkles,
   },
   {
     title: 'Salles de Massage & Relaxation',
     description: 'Espaces de bien-être et de sérénité',
-    image: 'https://images.unsplash.com/photo-1757940661240-f2e8d2ff93bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGElMjBzYXVuYSUyMGx1eHVyeXxlbnwxfHx8fDE3NjIxODMxMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: amenityMassage,
     icon: Heart,
   },
   {
     title: 'Salle de Cinéma & Salle d\'Art',
     description: 'Expérience culturelle et audiovisuelle premium',
-    image: 'https://images.unsplash.com/photo-1517486518908-97a5f91b325f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob21lJTIwY2luZW1hJTIwdGhlYXRlcnxlbnwxfHx8fDE3NjIxODMxMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: amenityCinema,
     icon: Film,
   },
   {
     title: 'Crèche',
     description: 'Espace spacieux et sécurisé pour les enfants',
-    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHBsYXlyb29tfGVufDF8fHx8MTc2MjE5MzU4MXww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: amenityCreche,
     icon: Baby,
   },
 ];
